@@ -11,19 +11,10 @@
       "sources": [
         "bindings/node/binding.cc",
         "src/parser.c",
-        # NOTE: if your language has an external scanner, add it here.
+        "src/scanner.cc",
       ],
-      "conditions": [
-        ["OS!='win'", {
-          "cflags_c": [
-            "-std=c11",
-          ],
-        }, { # OS == "win"
-          "cflags_c": [
-            "/std:c11",
-            "/utf-8",
-          ],
-        }],
+      "cflags_c": [
+        "-std=c11",
       ],
     }
   ]
